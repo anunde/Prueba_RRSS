@@ -19,6 +19,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -50,6 +51,7 @@
                         @else
                             <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Subir imagen</a></li>
+                            <li>@include('includes.avatar')</li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -60,7 +62,7 @@
                                         Mi perfil
                                     </a>
 
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="{{ route('config') }}">
                                         Configuracion
                                     </a>
 
