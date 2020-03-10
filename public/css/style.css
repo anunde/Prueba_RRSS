@@ -42,11 +42,20 @@ form .avatar {
 }
 
 .pub_image .btn-comments {
-	margin: 20px;
-	margin-top: 0;
-	margin-bottom: 0;
-	padding-bottom: 0;
+	display: block;
+	text-align: left;
+	padding: 0;
+	margin: 0;
 	color: #888;
+}
+
+.pub_image .comments {
+	padding-left: 29px;
+}
+
+.pub_image .comments h2 {
+	font-size: 15px;
+	font-weight: bold;
 }
 
 .user_desc {
@@ -71,6 +80,10 @@ form .avatar {
 	overflow: hidden;
 }
 
+.image-detail {
+	max-height: 500px;
+}
+
 .image-container img{
 	width: 100%;
 }
@@ -88,4 +101,40 @@ form .avatar {
 	padding-left: 29px;
 	font-size: 10px;
 	color: #888;
+}
+
+.pub_image_detail .comments{
+	padding-top: 10px;
+	padding-right: 29px;
+}
+
+.pub_image_detail .comments .comment .nickname{
+	font-weight: bold;
+	color: #333;
+}
+
+.pub_image_detail .comments .comment .comment-date{
+	display: block;
+	font-size: 9px;
+	color: #888;
+}
+
+.btn-comment {
+	margin-bottom: 10px;
+}
+
+.delete-comment {
+	font-size: 12px;
+	font-weight: bold;
+	margin-left: 5px;
+	color: #ab2a3e;
+	padding: 2px 5px 2px 5px;
+	border-radius: 2px;
+	transition: all 500ms;
+}
+
+.delete-comment:hover {
+	background-color: #ab2a3e;
+	color: #eee;
+	text-decoration: none;
 }

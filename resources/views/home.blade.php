@@ -34,7 +34,7 @@
                             @if(count($image->comments) == 0)
                                 No hay comentarios
                             @elseif(count($image->comments) == 1)
-                                Ver el commentario
+                                Ver el comentario
                             @elseif(count($image->comments) >= 2)
                                 Ver los {{count($image->comments)}} comentarios
                             @endif
