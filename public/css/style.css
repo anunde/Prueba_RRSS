@@ -3,7 +3,8 @@ form .avatar {
 	margin-bottom: 15px;
 }
 
-.navbar .container-avatar{
+.navbar .container-avatar,
+.pub_image .container-avatar{
 	width: 35px;
 	height: 35px;
 	border-radius: 900px;
@@ -11,6 +12,80 @@ form .avatar {
 	margin-left: 20px;
 }
 
-.navbar .container-avatar img{
+.navbar .container-avatar img,
+.pub_image .container-avatar img{
+	position: relative;
 	height: 100%;
+	left: -8.5px;
+}
+
+.pub_image {
+	margin-bottom: 25px;
+}
+
+.pub_image .card-body {
+	padding: 0;
+}
+
+.pub_image .description {
+	padding-left: 20px;
+	padding-top: 5px;
+}
+
+.pub_image .description span{
+	font-weight: bold;
+	color: #333;
+}
+
+.pub_image .description p {
+	margin: 0;
+}
+
+.pub_image .btn-comments {
+	margin: 20px;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	color: #888;
+}
+
+.user_desc {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-flow: row wrap;
+}
+
+.user_desc .container-avatar {
+	margin-right: 10px;
+}
+
+.user_desc .data-user {
+	font-weight: bold;
+	color: #444;
+}
+
+.image-container {
+	width: 100%;
+	max-height: 400px;
+	overflow: hidden;
+}
+
+.image-container img{
+	width: 100%;
+}
+
+.likes {
+	padding-left: 20px;
+	padding-top: 5px;
+}
+
+.likes img{
+	width: 20px;
+}
+
+.date {
+	padding-left: 29px;
+	font-size: 10px;
+	color: #888;
 }

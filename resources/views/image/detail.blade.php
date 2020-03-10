@@ -3,10 +3,9 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             @include('includes.message')
 
-        @foreach($images as $image)
             <div class="card pub_image">
                 <div class="card-header user_desc">
                     @if($image->user->image)
@@ -19,9 +18,7 @@
 
                 <div class="card-body">
                     <div class="image-container">
-                        <a href="{{ route('image.detail', ['id' => $image->id]) }}">
-                            <img src="{{ route('image.file', ['filename' => $image->image_path]) }}">
-                        </a>
+                        <img src="{{ route('image.file', ['filename' => $image->image_path]) }}">
                     </div>
                     <div class="likes">
                         <img src="{{asset('img/heart.png')}}">
@@ -45,14 +42,6 @@
                     </div>
                 </div>
             </div>
-        @endforeach
-
-        <!-- PAGINACIÓN -->
-
-        <div class="clearfix"></div>
-        {{$images->links()}}
-        </div>
-
     </div>
 </div>
 @endsection
