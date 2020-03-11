@@ -12,6 +12,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/main.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -50,6 +51,7 @@
                             </li>
                         @else
                             <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('likes') }}">Guardados</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('image.create') }}">Subir imagen</a></li>
                             <li>@include('includes.avatar')</li>
                             <li class="nav-item dropdown">

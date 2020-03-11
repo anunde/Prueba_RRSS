@@ -29,7 +29,6 @@ form .avatar {
 
 .pub_image .description {
 	padding-left: 20px;
-	padding-top: 5px;
 }
 
 .pub_image .description span{
@@ -95,6 +94,13 @@ form .avatar {
 
 .likes img{
 	width: 20px;
+}
+
+.like {
+	margin-top: 8px;
+	font-size: 14px;
+	font-weight: bold;
+	display: block;
 }
 
 .date {
