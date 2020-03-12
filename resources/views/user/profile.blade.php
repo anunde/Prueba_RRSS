@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
 
-        	<div class="data-user">
+        	<div class="data-user perfil">
 
         		@if($user->image)
                 	<div class="container-avatar">

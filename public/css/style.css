@@ -145,3 +145,22 @@ form .avatar {
 	color: #eee;
 	text-decoration: none;
 }
+
+.perfil {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 40px;
+}
+
+.perfil .container-avatar {
+	width: 150px;
+	height: 150px;
+	border-radius: 900px;
+	overflow: hidden;
+}
+
+.perfil .container-avatar img {
+	width: 100%;
+	height: 100%;
+}
