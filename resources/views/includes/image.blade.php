@@ -5,7 +5,11 @@
                             <img src="{{ route('user.avatar',['filename' => $image->user->image]) }}" class="avatar">
                         </div>
                     @endif
-                    <div class="data-user">{{'@'.$image->user->nick}}</div>
+                    <div class="data-user">
+                        <a href="{{ route('profile', ['id' => $image->user->id]) }}">
+                            {{'@'.$image->user->nick}}                            
+                        </a>
+                    </div>
                 </div>
 
                 <div class="card-body">
@@ -35,7 +39,7 @@
                         <p><span class="nickname">{{'@'.$image->user->nick}}</span> {{ $image->description }}</p>
                     </div>
                     <div class="comments">
-                        <a href="" class="btn btn-sm btn-comments">
+                        <a href="{{ route('image.detail', ['id' => $image->id]) }}" class="btn btn-sm btn-comments">
                             @if(count($image->comments) == 0)
                                 No hay comentarios
                             @elseif(count($image->comments) == 1)

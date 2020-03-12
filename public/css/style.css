@@ -68,9 +68,10 @@ form .avatar {
 	margin-right: 10px;
 }
 
-.user_desc .data-user {
+.user_desc .data-user a{
 	font-weight: bold;
 	color: #444;
+	text-decoration: none;
 }
 
 .image-container {
