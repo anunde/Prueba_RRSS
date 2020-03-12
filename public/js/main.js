@@ -52,5 +52,11 @@ window.addEventListener("load", function() {
 		});
 	}
 
-	dislike();	
+	dislike();
+
+	//BUSCADOR
+
+	$('#buscar').click(function() {
+		$('#buscador').attr('action', url+'users/'+$('#search').val());
+	});
 });

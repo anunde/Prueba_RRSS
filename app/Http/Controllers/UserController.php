@@ -7,11 +7,25 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use App\User;
+use App\Image;
 
 class UserController extends Controller
 {	
 	public function __construct() {
         $this->middleware('auth');
+    }
+
+    public function index($search = null) {
+
+        if (!empty($search)) {
+            $users = User::where('nick', 'LIKE', '%'.$search.'%')->orWhere('name', 'LIKE', '%'.$search.'%')->orWhere('surname', 'LIKE', '%'.$search.'%')->get();
+        } else {
+            $users = User::orderByRaw("RAND()")->get();
+        }
+
+        return view('user.index', [
+            'users' => $users
+        ]);
     }
 
     public function config() {
@@ -69,9 +83,11 @@ class UserController extends Controller
 
     public function profile($id) {
         $user = User::find($id);
+        $images = Image::where('user_id', $user->id)->orderBy('id', 'desc')->get();
 
         return view('user.profile', [
-            'user' => $user
+            'user' => $user,
+            'images' => $images
         ]);
     }
 }

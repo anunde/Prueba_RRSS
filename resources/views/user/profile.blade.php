@@ -11,7 +11,11 @@
                 	<div class="container-avatar">
                     	<img src="{{ route('user.avatar',['filename' => $user->image]) }}" class="avatar">
                 	</div>
-            	@endif
+            	@else
+                    <div class="container-avatar">
+                        <img src="{{asset('img/profile.png')}}" class="avatar">
+                    </div>
+                @endif
 
             	<div class="user-info">
             		<h1>{{ '@'.$user->nick }}</h1>
@@ -20,9 +24,14 @@
             	</div>
         	</div>
 
-        @foreach($user->images as $image)
-            @include('includes.image', ['image'=>$image])
-        @endforeach
+        @if($images && count($images) >=1 )
+            @foreach($images as $image)
+                @include('includes.image', ['image'=>$image])
+            @endforeach
+        @else
+            <hr>
+            <h1 class="sin-publicaciones">"Este usuario todavía no tiene publicaciones"</h1>
+        @endif
 
     </div>
 </div>

@@ -4,6 +4,10 @@
                         <div class="container-avatar">
                             <img src="{{ route('user.avatar',['filename' => $image->user->image]) }}" class="avatar">
                         </div>
+                    @else
+                    <div class="container-avatar">
+                        <img src="{{asset('img/profile.png')}}" class="avatar">
+                    </div>
                     @endif
                     <div class="data-user">
                         <a href="{{ route('profile', ['id' => $image->user->id]) }}">
